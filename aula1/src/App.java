@@ -4,16 +4,14 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
-import java.net.http.HttpResponse.BodyHandlers;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 
-public class Main {
-
+public class App {
 
     // Busca a url no arquivo.properties e adiciona a mesma numa variavel e retorna a variavel
-    public static Properties getProp() throws IOException{
+    public static Properties getProp() throws IOException {
         Properties prop = new Properties();
         try (FileInputStream file = new FileInputStream("src/Properties/url.properties")) {
             prop.load(file);
@@ -32,7 +30,7 @@ public class Main {
         URI endereco = URI.create(url);
         var client = HttpClient.newHttpClient();
         var request = HttpRequest.newBuilder(endereco).GET().build();
-        HttpResponse<String> response = client.send(request, BodyHandlers.ofString());
+        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
         String body = response.body();
 
         //extrair os dados desejados do json
