@@ -10,4 +10,8 @@
 
 ### Os codigos da segunda aula podem ser acessador atravez da branch aula2 no diretorio: aula1/src
 
+## O projeto da branch aula3 consiste na terceira aula onde foi feita toda uma reestruturação na estrutura de pacotes e classes do projeto para torna-lo mais organizado, e tambem modificações para que o projeto possa ser alimentado por apis diferentes
+
+### Os codigos da segunda aula podem ser acessador atravez da branch aula3 no diretorio: aula1/src
+
 
